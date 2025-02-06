@@ -1,0 +1,331 @@
+{
+  "client_info": {
+    "type": "object",
+    "mappings": [
+      {
+        "old_key": "manufacturer",
+        "new_key": "app_manufacturer"
+      },
+      {
+        "old_key": "model",
+        "new_key": "app_manufacturer_version"
+      },
+      {
+        "old_key": "app_version",
+        "new_key": "app_version"
+      },
+      {
+        "old_key": "git_hash",
+        "new_key": "app_version_commit_hash"
+      }
+    ]
+  },
+  "system_info": {
+    "type": "object",
+    "mappings": [
+      {
+        "old_key": "os_name",
+        "new_key": "client_os"
+      },
+      {
+        "old_key": "os_version",
+        "new_key": "client_os_version"
+      }
+    ]
+  },
+  "network_info": {
+    "type": "object",
+    "mappings": [
+      {
+        "old_key": "cell_id",
+        "new_key": "app_cellid"
+      },
+      {
+        "old_key": "network",
+        "new_key": "app_access"
+      },
+      {
+        "old_key": "network_id",
+        "new_key": "app_access_id"
+      },
+      {
+        "old_key": "cell_lac",
+        "new_key": "app_celllac"
+      },
+      {
+        "old_key": "cell_pci",
+        "new_key": "app_cellpci"
+      },
+      {
+        "old_key": "sinr",
+        "new_key": "app_sinr"
+      },
+      {
+        "old_key": "cell_rsrp",
+        "new_key": "app_rsrp"
+      },
+      {
+        "old_key": "cell_rsrq",
+        "new_key": "app_rsrq"
+      },
+      {
+        "old_key": "cell_rssi",
+        "new_key": "app_rssi"
+      },
+      {
+        "old_key": "cell_arfcn",
+        "new_key": "app_arfcn"
+      },
+      {
+        "old_key": "operator_sim_mcc",
+        "new_key": "app_operator_sim_mcc"
+      },
+      {
+        "old_key": "operator_sim_mnc",
+        "new_key": "app_operator_sim_mnc"
+      },
+      {
+        "old_key": "operator_net_mcc",
+        "new_key": "app_operator_net_mcc"
+      },
+      {
+        "old_key": "operator_net_mnc",
+        "new_key": "app_operator_net_mnc"
+      },
+      {
+        "old_key": "operator_sim",
+        "new_key": "app_operator_sim"
+      },
+      {
+        "old_key": "operator_net_changed",
+        "new_key": "app_operator_net_changed"
+      },
+      {
+        "old_key": "operator_net",
+        "new_key": "app_operator_net"
+      },
+      {
+        "old_key": "carrier_sim",
+        "new_key": "app_carrier_sim"
+      },
+      {
+        "old_key": "call_state",
+        "new_key": "app_call_state"
+      },
+      {
+        "old_key": "sims_active",
+        "new_key": "app_sims_active"
+      },
+      {
+        "old_key": "connection_type",
+        "new_key": "app_mode"
+      },
+      {
+        "old_key": "connection_type_download_start",
+        "new_key": "app_mode_download_start"
+      },
+      {
+        "old_key": "connection_type_upload_start",
+        "new_key": "app_mode_upload_start"
+      },
+      {
+        "old_key": "connection_type_rtt_start",
+        "new_key": "app_mode_rtt_udp_start"
+      },
+      {
+        "old_key": "connection_type_download_changed",
+        "new_key": "app_mode_download_changed"
+      },
+      {
+        "old_key": "connection_type_upload_changed",
+        "new_key": "app_mode_upload_changed"
+      },
+      {
+        "old_key": "connection_type_rtt_changed",
+        "new_key": "app_mode_rtt_udp_changed"
+      },
+      {
+        "old_key": "network_id_download_start",
+        "new_key": "app_access_id_download_start"
+      },
+      {
+        "old_key": "network_id_download_changed",
+        "new_key": "app_access_id_download_changed"
+      },
+      {
+        "old_key": "network_id_upload_start",
+        "new_key": "app_access_id_upload_start"
+      },
+      {
+        "old_key": "network_id_upload_changed",
+        "new_key": "app_access_id_upload_changed"
+      },
+      {
+        "old_key": "network_id_rtt_start",
+        "new_key": "app_access_id_rtt_udp_start"
+      },
+      {
+        "old_key": "network_id_rtt_changed",
+        "new_key": "app_access_id_rtt_udp_changed"
+      },
+      {
+        "old_key": "roaming_state",
+        "new_key": "app_roaming_state"
+      },
+      {
+        "old_key": "tethering_state",
+        "new_key": "app_tethering_state"
+      }
+    ]
+  },
+  "location_info": {
+    "type": "object",
+    "mappings": [
+      {
+        "old_key": "accuracy",
+        "new_key": "app_accuracy"
+      },
+      {
+        "old_key": "latitude",
+        "new_key": "app_latitude"
+      },
+      {
+        "old_key": "longitude",
+        "new_key": "app_longitude"
+      },
+      {
+        "old_key": "altitude",
+        "new_key": "app_altitude"
+      },
+      {
+        "old_key": "velocity",
+        "new_key": "app_velocity"
+      },
+      {
+        "old_key": "velocity_max",
+        "new_key": "app_velocity_max"
+      },
+      {
+        "old_key": "velocity_avg",
+        "new_key": "app_velocity_avg"
+      },
+      {
+        "old_key": "altitude_max",
+        "new_key": "app_altitude_max"
+      },
+      {
+        "old_key": "altitude",
+        "new_key": "app_altitude"
+      },
+      {
+        "old_key": "precise_permission",
+        "new_key": "app_precise_location_permission"
+      }
+    ]
+  },
+  "time_info": {
+    "type": "object",
+    "mappings": [
+      {
+        "old_key": "measurement_start",
+        "new_key": "date",
+        "convert": 1000000,
+        "format": "yyyy-MM-dd HH:mm:ss"
+      },
+      {
+        "old_key": "measurement_start",
+        "new_key": "timestamp",
+        "convert": 1000000,
+        "type": "int"
+      }
+    ]
+  },
+  "trace_server_info": {
+    "type": "array",
+    "mappings": [
+      {
+        "old_key": "id",
+        "new_key": "server_client_route_hops",
+        "type": "last"
+      },
+      {
+        "old_key": "null",
+        "new_key": "server_client_route",
+        "type": "all"
+      }
+    ]
+  },
+  "plan_info": {
+    "type": "object",
+    "mappings": [
+      {
+        "old_key": "id",
+        "new_key": "plan_id"
+      },
+      {
+        "old_key": "operator",
+        "new_key": "plan_operator"
+      },
+      {
+        "old_key": "operator_id",
+        "new_key": "plan_operator_id"
+      },
+      {
+        "old_key": "name",
+        "new_key": "plan_name"
+      },
+      {
+        "old_key": "dl_min",
+        "new_key": "plan_dl_min"
+      },
+      {
+        "old_key": "dl_norm",
+        "new_key": "plan_dl_norm"
+      },
+      {
+        "old_key": "dl_max",
+        "new_key": "plan_dl_max"
+      },
+      {
+        "old_key": "ul_min",
+        "new_key": "plan_ul_min"
+      },
+      {
+        "old_key": "ul_norm",
+        "new_key": "plan_ul_norm"
+      },
+      {
+        "old_key": "ul_max",
+        "new_key": "plan_ul_max"
+      },
+      {
+        "old_key": "db_version",
+        "new_key": "plan_db_version"
+      },
+      {
+        "old_key": "db_type",
+        "new_key": "plan_db_type"
+      },
+      {
+        "old_key": "speed",
+        "new_key": "app_speed"
+      },
+      {
+        "old_key": "provider",
+        "new_key": "app_provider"
+      },
+      {
+        "old_key": "satisfaction",
+        "new_key": "app_satisfaction"
+      },
+      {
+        "old_key": "nssd",
+        "new_key": "app_nssd"
+      },
+      {
+        "old_key": "nssd_n_active",
+        "new_key": "app_nssd_nactive"
+      }
+    ]
+  }
+}

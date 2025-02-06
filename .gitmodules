@@ -1,0 +1,6 @@
+[submodule "ias-android-common"]
+	path = ias-android-common
+	url = https://github.com/Breitbandmessung/ias-android-common.git
+[submodule "ias-client-cpp"]
+	path = ias-client-cpp
+	url = https://github.com/Breitbandmessung/ias-client-cpp.git

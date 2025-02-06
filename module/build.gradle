@@ -1,0 +1,86 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.kezong.fat-aar'
+
+def props = new Properties()
+file("../gradle.properties").withInputStream { props.load(it) }
+
+def versionTag = props.getProperty("version")
+
+def getGitHash = { ->
+    def stdout = new ByteArrayOutputStream()
+    exec {
+        commandLine 'git', 'rev-parse', '--short', 'HEAD'
+        standardOutput = stdout
+    }
+    return stdout.toString().trim()
+}
+
+android {
+    namespace 'com.zafaco.moduleSpeed'
+    ndkVersion android_ndk_version
+
+    buildFeatures {
+        buildConfig = true
+    }
+
+    defaultConfig {
+        minSdkVersion Integer.parseInt(android_min_sdk_version)
+        targetSdkVersion Integer.parseInt(android_target_sdk_version)
+        compileSdk Integer.parseInt(android_compile_sdk_version)
+
+        versionCode Integer.valueOf(System.env.VERSION_CODE ?: 1)
+        versionName "${versionTag}"
+        buildConfigField "String", "GitHash", "\"${getGitHash()}\""
+        buildConfigField("long", "VERSION_CODE", "${defaultConfig.versionCode}")
+        buildConfigField("String","VERSION_NAME","\"${defaultConfig.versionName}\"")
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        ndkVersion android_ndk_version
+    }
+
+
+
+
+    buildTypes {
+
+        debug {
+            minifyEnabled false
+        }
+
+        release {
+            minifyEnabled true
+            proguardFiles 'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions "version"
+    productFlavors {
+        full {
+            dimension 'version'
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            path file('../ias-client-cpp/CMakeLists.txt')
+        }
+    }
+    
+}
+
+dependencies {
+    androidTestImplementation "androidx.test.ext:junit:$androidxJUnitVersion"
+    androidTestImplementation "androidx.test:rules:$rulesVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVersion"
+    testImplementation "junit:junit:$jUnitVersion"
+
+    implementation "com.google.android.gms:play-services-location:$playServicesVersion"
+
+    compileOnly "io.reactivex.rxjava2:rxandroid:$rxandroid"
+    compileOnly "io.reactivex.rxjava2:rxjava:$rxjava2"
+
+    api "com.squareup.retrofit2:retrofit:$retrofit2"
+    api "com.squareup.retrofit2:converter-gson:$retrofit2"
+
+    implementation project(path: ':ias-android-common')
+}

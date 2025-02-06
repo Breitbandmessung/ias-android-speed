@@ -1,0 +1,5 @@
+include ':ias-android-speed'
+include ':ias-android-common'
+
+project(':ias-android-speed').projectDir = new File('module')
+project(':ias-android-common').projectDir = new File('ias-android-common/module')
